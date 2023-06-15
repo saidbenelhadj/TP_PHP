@@ -24,7 +24,8 @@ $prixHT = 15;
             <form action="" method="get">
                 <label for="" class="form-label">number</label>
                 <input type="text" class="form-control" name="data" id="" aria-describedby="helpId" placeholder="Saisir chiffre">
-                <input type="submit" value="envoyez">
+                <input type="submit" value="envoyez" class="btn btn-outline-primary">
+                <input type="reset" value="reset" class="btn btn-outline-secondary">
             </form>
             </div>
         </div>
