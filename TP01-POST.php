@@ -1,7 +1,7 @@
 <?php
 
-  if(isset($_GET["data"]) && !empty($_GET["data"])){
-    $prixHT = $_GET["data"];
+  if(!empty($_POST["data"])){
+    $prixHT = $_POST["data"];
     $tva = 20/100;
     $prixTTC = $prixHT + ($prixHT*$tva);
     $message ="le prix HT est de $prixHT € avec une TVA de $tva ce qui donne un Prix TTC = $prixTTC €";
@@ -26,7 +26,7 @@
         <div class = "row">
             <div class="mb-12">
                 <?php
-                 if(isset($_GET["data"]) && !empty($_GET["data"])){
+                 if(empty($_POST["data"])){
                     echo $message;
                  } else{
                     echo "<p classe= 'error'>".$error. '</p>';

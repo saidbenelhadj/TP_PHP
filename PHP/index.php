@@ -182,13 +182,12 @@ $numJour = 4;
     </head>
     <body>
         <form action="" method="get">
-    <label>Entrez un texte :</label>
-    <div class="mb-12">
-      <label for="" class="form-label">Data</label>
-      <input type="text" class="form-control" name="data" id="" aria-describedby="helpId" placeholder="saisir texte">
-      <input type="submit" value="envoyez">
-    </div>
-
+            <label>Entrez un texte :</label>
+            <div class="mb-12">
+            <label for="" class="form-label">Data</label>
+            <input type="text" class="form-control" name="data" id="" aria-describedby="helpId" placeholder="saisir texte">
+            <input type="submit" value="envoyez">
+            </div>
         </form>
     </body>
     </html>
