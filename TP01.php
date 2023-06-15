@@ -4,6 +4,6 @@ $prixHT = 20;
 $tva = 0.2;
 $prixTTC = $prixHT + ($prixHT*$tva);
 
-echo "<p>Prix TTC</p>";
+echo "<p>le prix HT est de $prixHT € avec une TVA de $tva ce qui donne un Prix TTC = $prixTTC €</p>";
 
 ?>
