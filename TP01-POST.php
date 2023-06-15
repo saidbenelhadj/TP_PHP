@@ -1,6 +1,6 @@
 <?php
 
-  if(!empty($_POST["data"])){
+  if(isset($_POST["data"]) && !empty($_POST["data"])){
     $prixHT = $_POST["data"];
     $tva = 20/100;
     $prixTTC = $prixHT + ($prixHT*$tva);
@@ -17,19 +17,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>TP01-GET</title>
-    <style>
-        .error{
-            color:red;
-        }
-    </style>
     <div class="container">
         <div class = "row">
             <div class="mb-12">
                 <?php
-                 if(empty($_POST["data"])){
+                 if(isset($_POST["data"]) && !empty($_POST["data"])){
                     echo $message;
                  } else{
-                    echo "<p classe= 'error'>".$error. '</p>';
+                    echo $error;
                  }
                 ?>
             <form action="" method="POST">
