@@ -32,7 +32,7 @@
                     echo "<p classe= 'error'>".$error. '</p>';
                  }
                 ?>
-            <form action="" method="get">
+            <form action="" method="POST">
                 <label for="" class="form-label">number</label>
                 <input type="text" class="form-control" name="data" id="" aria-describedby="helpId" placeholder="Saisir chiffre">
                 <input type="submit" value="envoyez" class="btn btn-outline-primary">
