@@ -1,15 +1,14 @@
 <?php
-$seuil = 35;
+$seuil = 16;
 $num = 15;
-$resultat = $num * 2;
 
-if($resultat < $seuil) {
 
+if($num < $seuil) {
+    $resultat = $num * 2;
     echo "La valeur de notre resultat $resultat est bien inférieur a notre seuil $seuil";
 }
 else{
-    echo "erreur";
+    echo $num;
 }
-
 
 ?>
