@@ -132,6 +132,65 @@ else{
     echo "<h3>false</h3>";
 }
 
+
+// les switch servent a tester une valeur sur une variable
+
+$numJour = 4;
+
+    switch ($numJour) {
+        case 1:
+            echo "Nous sommes Lundi";
+            break;
+        case 2:
+            echo 'Nous sommes Mardi';
+            break;
+        case 3:
+            echo 'Nous sommes Mercredi';
+            break;         
+        case 4:
+            echo 'Nous sommes Jeudi';
+            break;
+        case 5:
+            echo 'Nous sommes Vendredi';
+            break;
+        case 6:
+            echo 'Nous sommes Samedi';
+            break;
+        case 7:
+            echo 'Nous sommes Dimanche';
+            break;
+        default:
+           echo "Ce jour n'exite pas";
+            break;
+    }
+
+    // Méthode GET et POST 
+        if(isset($_GET["data"]) && !empty($_GET["data"])){
+            $data = $_GET["data"];
+            echo "<h3>". $data. "</h3>";
+        }else{
+            echo "<h3>Veuillez saisr une donnée!</h3>";
+        }
     ?>
+
+    <!DOCTYPE html>
+    <html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <form action="" method="get">
+    <label>Entrez un texte :</label>
+    <div class="mb-12">
+      <label for="" class="form-label">Data</label>
+      <input type="text" class="form-control" name="data" id="" aria-describedby="helpId" placeholder="saisir texte">
+      <input type="submit" value="envoyez">
+    </div>
+
+        </form>
+    </body>
+    </html>
 </body>
 </html>
