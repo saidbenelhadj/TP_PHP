@@ -1,6 +1,6 @@
 <?php
 
-$prixHT = 20;
+$prixHT = 15;
 $tva = 0.2;
 $prixTTC = $prixHT + ($prixHT*$tva);
 
