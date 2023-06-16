@@ -180,10 +180,23 @@ $numJour = 4;
 */
     echo "<br> <br>";
     echo "<h3>LES BOUCLES</h3>";
+
+
+    echo "<h5>Boucles for</h5>";
         $number = 8;
         for ($i = 0; $i < $number; $i++) {
             echo $i;
         }
+    echo "<h5>Boucles while</h5>";
+
+        // il faut connaitre le nombre d'iteration pour la boucle while
+
+        $i= 0;
+      while ($i <= $number) {
+       echo $i."<br>";
+        $i++;
+      }  
+ 
 
     ?>
 
