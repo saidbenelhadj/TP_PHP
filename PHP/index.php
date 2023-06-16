@@ -191,12 +191,41 @@ $numJour = 4;
 
         // il faut connaitre le nombre d'iteration pour la boucle while
 
-        $i= 0;
-      while ($i <= $number) {
+    $i= 0;
+    while ($i <= $number) {
        echo $i."<br>";
         $i++;
-      }  
- 
+    }  
+    echo "<h5>Boucles do while</h5>";
+
+    $a= 101;
+    do {
+        echo $a."<br>";
+        $a+= 2;
+    } while ($a <= 100);
+
+
+    echo "<h5>Boucles foreach tableau indexé</h5>";
+    $notes = array(12, 12, 14, 18);
+    foreach ($notes as $key) {
+        echo $key."<br>";
+    }
+
+    echo "<h5>Boucles foreach tableau associatif</h5>";
+
+    $note2 = array(
+        "Jean" => 12,
+        "Julien" =>13,
+        "Sylvain" =>14,
+        "Seb" => 16);
+
+    foreach ($note2 as $key => $value) {
+        echo "la note de $key : $value<br>";
+    }
+        
+    echo "<h3>Cookies</h3>";
+    setcookie("prenom", "said", time() + 60 * 60);
+    echo $_COOKIE["prenom"];
 
     ?>
 
