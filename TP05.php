@@ -64,14 +64,14 @@ if(isset($_POST) && !empty($_POST)){
                         echo "<small> veuillez remplir le Prenom </small>";
                     }
                     ?>
-                    <input type="text" class="form-control" name="prenom" id="" aria-describedby="helpId" placeholder="Saisir chiffre">
+                    <input type="text" class="form-control" name="prenom" id="" aria-describedby="helpId" placeholder="Saisir prenom">
                     <label for="" class="form-label">Nom</label>
                     <?php
                         if(isset($_POST["nom"]) && empty($_POST["nom"])){
                         echo "<small> veuillez remplir le Nom </small>";
                     }
                     ?>
-                    <input type="text" class="form-control" name="nom" id="" aria-describedby="helpId" placeholder="Saisir chiffre">
+                    <input type="text" class="form-control" name="nom" id="" aria-describedby="helpId" placeholder="Saisir nom">
                     <label for="" class="form-label">Age</label>
                     <?php
                         if(isset($_POST["age"]) && empty($_POST["age"])){

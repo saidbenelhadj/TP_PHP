@@ -227,6 +227,21 @@ $numJour = 4;
     setcookie("prenom", "said", time() + 60 * 60);
     echo $_COOKIE["prenom"];
 
+    function greeting($a,$b){
+        echo $a." <br>";
+        echo $b."<br>";
+    }
+    greeting("Jean", "Sylvain");
+
+    function multiplying(int $a,int $b) : string {
+        $calcul = $a * $b;
+        if ($calcul > 10){
+            return "la valeur est supérieur à 10 <br>";
+        }else{
+            return "la valeur est inférieur à $calcul<br>";
+        }
+    }
+    echo multiplying(6,3);
     ?>
 
     <!DOCTYPE html>
