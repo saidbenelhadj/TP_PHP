@@ -27,6 +27,8 @@
         - Le message "Bonjour..." doit s'afficher à la place du H1 de base
 */
 setcookie("prenom", $_POST["prenom"] , time() + 60 * 60);
+setcookie("nom", $_POST["nom"] , time() + 60 * 60);
+setcookie("age", $_POST["age"] , time() + 60 * 60);
 $data = $_COOKIE;
 if(isset($_POST["data"]) && !empty($_POST["data"])){
     
@@ -51,7 +53,7 @@ if(isset($_POST["data"]) && !empty($_POST["data"])){
 <body>
     <?php
             if(!empty($_COOKIE? $_COOKIE : null)){
-            echo "<h1>Bonjour " .$_COOKIE["prenom"]. " " .$_POST["nom"]. " tu as " .$_POST["age"] ." ans" ;
+            echo "<h1>Bonjour " .$_COOKIE["prenom"]. " " .$_COOKIE["nom"]. " tu as " .$_COOKIE["age"] ." ans" ;
             }else{
                 echo "<h1>Formulaire avec cookie</h1>" ;
             }
