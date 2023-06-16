@@ -32,13 +32,6 @@ if(isset($_POST) && !empty($_POST)){
     setcookie("age", $_POST["age"] , time() + 60 * 60);
 }
 
-$data = $_COOKIE;
-if(isset($_POST["data"]) && !empty($_POST["data"])){
-    
-    $message = "Bonjour " .$data["prenom"]. " " .$data["nom"]. "tu as " .$data["age"] ."ans";
-    }else{
-        $error = "<p> Veuillez saisir vos informations! </p>";
-    }
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -61,17 +54,9 @@ if(isset($_POST["data"]) && !empty($_POST["data"])){
                 echo "<h1>Veuillez renseignez les informations</h1>" ;
             }
             ?>
-      
     <div class="container">
         <div class = "row">
             <div class="mb-12">
-                <?php
-                 if(isset($_COOKIE["data"]) && !empty($_COOKIE["data"])){
-                    echo $message;
-                 } else{
-                    echo $error;
-                 }
-                ?>
                 <form action="" method="POST">
                     <label for="" class="form-label">Prénom</label>
                     <?php
