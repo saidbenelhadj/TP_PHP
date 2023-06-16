@@ -8,5 +8,5 @@ for ($i = 1; $i < $number; $i+=2) {
 $i= 0;
 while ($i <= $number) {
  echo $i;
-  $i++;
+  $i+=2;
 } 
