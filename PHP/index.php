@@ -165,12 +165,26 @@ $numJour = 4;
     }
 
     // Méthode GET et POST 
+
         if(isset($_GET["data"]) && !empty($_GET["data"])){
             $data = $_GET["data"];
             echo "<h3>". $data. "</h3>";
         }else{
             echo "<h3>Veuillez saisr une donnée!</h3>";
         }
+
+    /* Les boucles 
+        for(variable de compteur ; condition a tester ; modification du compteur){
+            instruction
+        }
+*/
+    echo "<br> <br>";
+    echo "<h3>LES BOUCLES</h3>";
+        $number = 8;
+        for ($i = 0; $i < $number; $i++) {
+            echo $i;
+        }
+
     ?>
 
     <!DOCTYPE html>

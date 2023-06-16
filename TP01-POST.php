@@ -8,7 +8,7 @@
     }else{
         $error = "<p> Veuillez saisir un prix! </p>";
     }
-    // $prixHT = !empty($_GET["data"] ? $_GET["data"] : null);
+    // $prixHT = !empty($_POST["data"] ? $_POST["data"] : null);
 ?>
 <!DOCTYPE html>
 <html lang="fr">
