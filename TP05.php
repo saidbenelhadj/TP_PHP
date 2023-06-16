@@ -26,9 +26,12 @@
         - Le message d'erreur doit s'afficher sous le champ qui pose problème
         - Le message "Bonjour..." doit s'afficher à la place du H1 de base
 */
-setcookie("prenom", $_POST["prenom"] , time() + 60 * 60);
-setcookie("nom", $_POST["nom"] , time() + 60 * 60);
-setcookie("age", $_POST["age"] , time() + 60 * 60);
+if(isset($_POST) && !empty($_POST)){
+    setcookie("prenom", $_POST["prenom"] , time() + 60 * 60);
+    setcookie("nom", $_POST["nom"] , time() + 60 * 60);
+    setcookie("age", $_POST["age"] , time() + 60 * 60);
+}
+
 $data = $_COOKIE;
 if(isset($_POST["data"]) && !empty($_POST["data"])){
     
@@ -55,7 +58,7 @@ if(isset($_POST["data"]) && !empty($_POST["data"])){
             if(!empty($_COOKIE? $_COOKIE : null)){
             echo "<h1>Bonjour " .$_COOKIE["prenom"]. " " .$_COOKIE["nom"]. " tu as " .$_COOKIE["age"] ." ans" ;
             }else{
-                echo "<h1>Formulaire avec cookie</h1>" ;
+                echo "<h1>Veuillez renseignez les informations</h1>" ;
             }
             ?>
       
@@ -63,7 +66,7 @@ if(isset($_POST["data"]) && !empty($_POST["data"])){
         <div class = "row">
             <div class="mb-12">
                 <?php
-                 if(isset($_POST["data"]) && !empty($_POST["data"])){
+                 if(isset($_COOKIE["data"]) && !empty($_COOKIE["data"])){
                     echo $message;
                  } else{
                     echo $error;
