@@ -26,6 +26,10 @@ if(isset($_POST) && !empty($_POST)){
     setcookie("login", $_POST["login"] , time() + 60 * 60);
     setcookie("mdp", $_POST["mdp"] , time() + 60 * 60);
 }
+if(!empty($_POST['submit'])){
+    $login = $_POST['login'];
+    $mdp = $_POST['mdp'];
+}
 
 ?>
 <!DOCTYPE html>
@@ -59,7 +63,7 @@ if(isset($_POST) && !empty($_POST)){
                     }
                     ?>
                     <input type="password" class="form-control" name="mdp" id="" aria-describedby="helpId" placeholder="Saisir mot de passe">
-                    <input type="submit" value="envoyez" class="btn btn-outline-primary">
+                    <input type="submit" value="envoyez" name="submit" class="btn btn-outline-primary">
                     <input type="reset" value="reset" class="btn btn-outline-secondary">
                 </form>
             </div>
